@@ -1,0 +1,414 @@
+/* ---------------------------------------------------------------
+            RE-INITIALISATION DES TAGS HTML
+    Pour éviter les valeurs par défaut différentes suivant les 
+    navigateurs. Seuls les tags le plus souvent utilisés et non 
+    dépréciés sont pris en compte.
+    Reset complet : http://meyerweb.com/eric/tools/css/reset/
+--------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* ---------------------------------------------------------------
+    FEUILLE DE STYLE ORIGINALE  
+--------------------------------------------------------------- */
+body {
+    background: #20190f;
+    color: #e8dbb1;
+    font: 14px Verdana, Geneva, Sans-Serif;
+}
+
+#bcContenu {
+    background: url(../images/fond.jpg);
+    margin: 0 auto;
+    width: 800px;
+    padding-bottom: 40px; 
+}
+    
+/* ---------------------------------------------------------------
+    BLOC ENTETE
+--------------------------------------------------------------- */
+header {
+    background: url(../images/entete.jpg) no-repeat;
+    height: 270px;
+    position: relative;
+}
+
+#deconnecter {
+    background: url(../images/entete_deconnecte.jpg) no-repeat;
+    height: 270px;
+    position: relative;
+}
+/* Tous les éléments descendants de l'élément header sont positionnés en absolu.
+ * Comme l'élément header est en positionnement relatif, cet élément header est le bloc conteneur 
+ * de ses enfants.
+ * => au final, le bloc conteneur de chaque élément est son élément parent.
+ * (i.e. : chaque élément est positionné en absolu par rapport à son élément parent)
+ */ 
+header * {
+    position: absolute;
+}
+    
+header > a[title*=connecter] {
+    background: url(../images/deconnexion.png) no-repeat;
+    height: 73px;
+    left: 732px;
+    top: 14px;
+    width: 68px;
+}
+
+header > a[title*=connecter]:hover {
+    background: url(../images/deconnexion_over.png) no-repeat;  
+}
+    
+header > a[title*=accueil] {
+    background: url(../images/home.png) no-repeat;  
+    height: 44px;
+    left: 540px;
+    top: 84px;
+    width: 48px;
+}
+    
+header > a[title*=accueil]:hover {
+    background: url(../images/home_over.png) no-repeat; 
+}
+
+header > a[title*=cherche] {
+    background: url(../images/cherche.png) no-repeat;   
+    height: 40px;
+    left: 600px;
+    top: 86px;  
+    width: 44px;
+}
+    
+header > a[title*=cherche]:hover {
+    background: url(../images/cherche_over.png) no-repeat;  
+}
+
+header > a[title*=informations] {
+    background: url(../images/config.png) no-repeat;    
+    height: 40px;
+    left: 659px;
+    top: 87px;  
+    width: 44px;
+}
+    
+header > a[title*=informations]:hover {
+    background: url(../images/config_over.png) no-repeat;   
+}
+
+/* -- FORMULAIRE DE SAISIE MESSAGE -- */
+header form {
+    background: url(../images/saisie.png) no-repeat;
+    height: 142px;
+    left: 272px;
+    top: 127px;
+    width: 528px;
+}
+    
+header textarea {
+    background: #f5f4f4;
+    border: 1px solid #b4b3b3;
+    color: #7a370d;
+    height: 55px;
+    left: 45px;
+    overflow: hidden;
+    top: 26px;
+    width: 468px;
+    resize: none;
+}
+    
+textarea:focus, input:focus {
+    outline: none;
+}
+
+    
+header input[type=submit] {
+    background: url(../images/haut_parleur.png) no-repeat;
+    border: none;
+    cursor: pointer;
+    height: 44px;
+    left: 457px;
+    top: 90px;
+    width: 52px;
+}
+    
+header input[type=submit]:hover {
+    background: url(../images/haut_parleur_over.png) no-repeat;
+}
+
+header h1{
+    background: url("../images/trait.png") no-repeat bottom;
+    color: #be7e11;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0 10px 6px 0;
+    text-align: right;
+    top: 165px;
+    right: 8px;
+    width: 590px;   
+}
+
+/* ---------------------------------------------------------------
+    BLOC INFOS
+--------------------------------------------------------------- */
+aside {
+    background: url(../images/micro.jpg) no-repeat;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    float: left;
+    padding-left: 15px;
+    width: 235px;
+    margin-bottom: 30px;
+    min-height: 450px;
+    color: #efe7de;
+}
+    
+aside h3 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 16px;
+}
+        
+aside img {
+    height: 50px;
+    margin: 0 4px 4px 0;
+    vertical-align: middle;
+    width: 50px;
+}
+
+aside a{
+    font-weight: bold;
+}
+/* ---------------------------------------------------------------
+    BLOC PRINCIPAL DE LA PAGE : MESSAGES OU AUTRES
+--------------------------------------------------------------- */
+main{
+    margin: 20px 0 0 250px;
+}
+    
+main ol {
+    list-style-type:arabic-numbers;
+    margin-left: 50px;
+}
+
+main ol li {
+    margin-top: 7px;
+}
+
+main ul li:not(.plusBlablas) {
+    background: url(../images/fond_blabla.png);
+    margin: 0 0 10px 25px;
+    padding: 5px 5px 5px 35px;
+    border-radius: 5px;
+    min-height: 60px;
+}
+
+main li:not(.plusBlablas).pasDeFond {
+    background: inherit;
+}
+
+.imgAuteur {
+    float: left;
+    height: 50px;
+    margin-left: -60px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.finMessage{
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.finMessage a {
+    float: right;
+    margin-left: 20px;
+    width: auto;
+    opacity: 0.6;
+}
+
+.finMessage a:hover {
+    opacity: 1;
+}
+    
+main li.plusBlablas {
+    text-align: right;
+}
+
+main li.plusBlablas img{
+    vertical-align:middle;
+    margin-left: 5px;
+}
+
+a {
+    color: #3c96f1;
+    text-decoration: none;
+}
+    
+a:hover {
+    text-decoration: underline;
+}
+    
+strong {
+    font-weight: bold;
+}
+
+main h1 {
+    font-weight: bold;
+}
+/* ---------------------------------------------------------------
+    FORMULAIRE
+--------------------------------------------------------------- */
+
+form table {
+    margin: 15px auto;
+}
+
+form table.alignGauche {
+    margin: inherit;
+}
+
+form input[type=text], form input[type=email], form input[type=password] {
+    width: 250px;
+}
+
+form table td {
+    padding: 7px;
+}
+
+form table td.alignGauche{
+    padding: inherit;
+}
+
+form td:first-child {
+    text-align: right;
+}
+
+form tr:last-child td[colspan]{
+    text-align: center;
+}
+
+input {
+    color: #7a370d;
+}
+
+main input[type="submit"], main input[type="reset"]{
+    background-image: url("../images/bouton.png");
+    background-color: transparent;
+    border: none; 
+    width: 142px;
+    height: 42px;
+    padding-bottom: 5px;
+    margin : 0 20px 0 20px;
+}
+
+main input[type="submit"]:hover, main input[type="reset"]:hover {
+    background-image: url("../images/bouton_over.png");
+    color: #3C96F1;
+    font-weight: bold;
+}
+
+.error, .noError {
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.error{
+    border: solid 2px #A00;
+    color: #A00;
+}
+
+.noError{
+    border: solid 2px #0A0;
+    color: #0A0;
+}
+
+.miniBio{
+    vertical-align: middle;
+    color: #7a370d;
+    resize: none;
+    width: 300px;
+    height: 250px;
+}
+
+p.titreFormulaire {
+    font-size: 15px;
+    border-bottom: 2px solid #e8dbb1;
+	font-weight: bold;
+    margin-bottom: 20px;
+}
+
+p.alignDroite {
+    text-align: right;
+}
+
+tr.formUtilisateur td:first-child {
+    vertical-align: middle;
+}
+
+tr.formUtilisateur td:last-child {
+    width: 370px;
+}
+/* ---------------------------------------------------------------
+    BLOC PIED DE PAGE
+--------------------------------------------------------------- */
+footer{
+    background: url(../images/pied.png) no-repeat;
+    clear: both;
+    height: 65px;
+    margin-top: 20px;
+    text-align: center; 
+}
+
+footer a {
+    margin: 0 10px;
+    font-size: 12px;
+    opacity: 0.6;
+}
+    
+footer a:hover {
+    opacity: 1;
+}
