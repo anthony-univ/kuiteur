@@ -2,5 +2,5 @@
 
 Application web gérant un mini-réseau social
 
-## Author 
+## Auteur 
 Anthony Gasca-Gimeno
